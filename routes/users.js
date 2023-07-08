@@ -86,7 +86,7 @@ router.post("/forgetPassword", async (req, res, next) => {
       //Sending Mail
       const email = user.email;
       const name = user.name;
-      const url = `http://localhost:3000/reset-password/${randomString}`;
+      const url = `https://node-day-5-fe.netlify.app/reset-password/${randomString}`;
       const text = "Reset Your Password";
       SendResetEmail(email, url, text, name);
 
